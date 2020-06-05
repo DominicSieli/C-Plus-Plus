@@ -15,16 +15,17 @@ int main()
 
 	switch(scenes)
 	{
-		case Scenes::Scene_0 : std::cout << "Loaded Scene_0" << std::endl;
+		case Scenes::Scene_0 : std::cout << "Loaded Scene 0" << std::endl;
 		break;
 
-		case Scenes::Scene_1 : std::cout << "Loaded Scene_1" << std::endl;
+		case Scenes::Scene_1 : std::cout << "Loaded Scene 1" << std::endl;
 		break;
 
-		case Scenes::Scene_2 : std::cout << "Loaded Scene_2" << std::endl;
+		case Scenes::Scene_2 : std::cout << "Loaded Scene 2" << std::endl;
 		break;
 
-		default : break;
+		default :
+		break;
 	}
 
 	std::cin.get();
