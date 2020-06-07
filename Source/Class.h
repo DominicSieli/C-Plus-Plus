@@ -1,51 +1,34 @@
 #include <iostream>
 
-class Base
+template<typename T>
+class AbstractBaseClass
 {
-private:
-	unsigned int data = 0;
-	static unsigned int Count;
-
 public:
-	Base(const unsigned int& value = 0)
-		: data{value}
-	{
-		Count++;
-	}
+	virtual ~AbstractBaseClass(){}
 
-	~Base()
-	{
-		Count--;
-	}
-
-	unsigned int GetData() const
-	{
-		return this->data;
-	}
-
-	void SetData(const unsigned int& value)
-	{
-		this->data = value;
-	}
-
-	static unsigned int GetCount()
-	{
-		return Count;
-	}
+	virtual void SetData(T) = 0;
+	virtual int GetData() const = 0;
 };
 
-unsigned int Base::Count = 0;
+template<typename T>
+class SubClass : public AbstractBaseClass<T>
+{
+private:
+	T data;
+public:
+	SubClass(T value) : data(value){}
+	~SubClass(){}
+
+	void SetData(T value) {this->data = value;}
+	T GetData() const {return this->data;}
+};
 
 int main()
 {
-	Base stackBase(2);
-	Base* heapBase = new Base(4);
-
-	std::cout << stackBase.GetData() << std::endl;
-	std::cout << heapBase->GetData() << std::endl;
-	std::cout << Base::GetCount() << std::endl;
-
-	delete heapBase;
+	SubClass<int> subClass(0);
+	std::cout << subClass.GetData() << std::endl;
+	subClass.SetData(20);
+	std::cout << subClass.GetData() << std::endl;
 
 	std::cin.get();
 }
