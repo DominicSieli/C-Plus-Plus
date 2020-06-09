@@ -1,8 +1,8 @@
 cd ..
 cd ..
 
-mkdir Assembly/Windows
+mkdir Assembly\Windows
 
-set projectName=Assembly_Optimized
+set projectName=Assembly_Debug
 
 g++ -S -g -Wall -std=c++17 Source/*.cpp -o Assembly/Windows/%projectName%

@@ -1,7 +1,7 @@
 cd ..
 cd ..
 
-mkdir Binaries/Windows
+mkdir Binaries\Windows
 
 set projectName=Build_Optimized
 

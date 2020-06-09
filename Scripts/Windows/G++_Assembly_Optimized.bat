@@ -1,7 +1,7 @@
 cd ..
 cd ..
 
-mkdir Assembly/Windows
+mkdir Assembly\Windows
 
 set projectName=Assembly_Optimized
 
