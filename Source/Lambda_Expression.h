@@ -7,13 +7,13 @@ auto Sum = [](int n1,int n2)->int {return n1 + n2;}; // Lambda funcion sums n1 a
 int main() // Main function is the executables entry point
 {
     int n = 64;
-    auto SquareRoot = [n]()->int {return sqrt(n);}; // Lambda captures n in captue clause[n]
+    auto SquareRoot = [=]()->int {return sqrt(n);}; // Lambda captures all local variables (n) in captue clause[n] by value
 
     std::cout << Sum(2,6) << std::endl;
 	std::cout << Square(4) << std::endl;
     std::cout << SquareRoot() << std::endl;
 
-    [&n](int x = 4){n-=x;}(4); // Lambda captures n by reference and subtracts 4
+    [&](int x = 4){n-=x;}(4); // Lambda captures all local variables (n) in captue clause[n] by reference
     std::cout << n << std::endl;
 
 
