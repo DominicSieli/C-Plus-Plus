@@ -1,1 +1,1 @@
-#include "Const.h" // Preprocessor directive includes .h file
+#include "Struct.h" // Preprocessor directive includes .h file
