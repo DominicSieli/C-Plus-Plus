@@ -14,10 +14,9 @@ namespace DataStructures
 
 	public:
 		DynamicArrayStack(const unsigned int& size) :
-			stack{ new T[size + 1] },
-			size{ size + 1 }
+			stack(new T[size + 1]), size(size + 1)
 		{
-			
+
 		}
 
 		~DynamicArrayStack()
@@ -30,7 +29,7 @@ namespace DataStructures
 			return this->count == 0;
 		}
 
-		void Push(const T& item)
+		void Push(const T& data)
 		{
 			this->count++;
 
@@ -44,7 +43,7 @@ namespace DataStructures
 				this->stack = newStack;
 			}
 
-			this->stack[this->count] = item;
+			this->stack[this->count] = data;
 		}
 
 		T Pop()
