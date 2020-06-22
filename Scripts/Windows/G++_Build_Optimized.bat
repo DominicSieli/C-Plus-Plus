@@ -1,5 +1,4 @@
-cd ..
-cd ..
+cd ../..
 
 mkdir Binaries\Windows
 

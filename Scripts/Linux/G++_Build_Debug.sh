@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-cd ..
-cd ..
+cd ../..
 
 mkdir -p Binaries/Linux
 
