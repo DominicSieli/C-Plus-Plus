@@ -16,5 +16,4 @@ int main()
 	std::cout << "Initials: " << name[0] << "." << name[8] << "." << std::endl;
 	std::cout << "Appatrment #: " << appartment.substr(5,4) << std::endl;
 	std::cout << "Letters in name: " << (name.length() - 1) << std::endl;
-	std::cin.get();
 }
