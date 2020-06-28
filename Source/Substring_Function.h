@@ -7,33 +7,30 @@ std::vector<std::string> Substrings(const std::string& string, const char& separ
 {
    unsigned int index = 0;
    unsigned int length = 0;
+   unsigned int separators = 0;
    std::vector<std::string> substrings;
 
-   for(unsigned int i = 0; i < string.length(); i++)
+   while(index < string.length())
    {
-	   if(string[i] != separator)
-	   {
-		   index = i;
+		length = 0;
+		separators = 0;
 
-		   for(unsigned int l = i; l < string.length(); l++)
-		   {
-			   if(string[l] == separator)
-	   			{
-					i = l;
-		   			length = l - index;
-		   			substrings.push_back(string.substr(index, length));
-					break;
-	   			}
+		while((index + length) < string.length() && string[index + length] != separator)
+		{
+			length++;
+		}
 
-				if(l == string.length() - 1)
-	   			{
-					i = l;
-		   			length = (l - index) + 1;
-		   			substrings.push_back(string.substr(index, length));
-					break;
-	   			}
-		   }
-	   }
+		while((index + length + separators) < string.length() && string[index + length + separators] == separator)
+		{
+			separators++;
+		}
+
+		if(length > 0)
+		{
+			substrings.push_back(string.substr(index, length));
+		}
+
+		index += (length + separators);
    }
 
    return substrings;
