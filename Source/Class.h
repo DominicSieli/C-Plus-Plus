@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 template<typename T>
@@ -26,9 +27,9 @@ public:
 int main()
 {
 	SubClass<int> subClass(0);
-	std::cout << subClass.GetData() << std::endl;
+	std::cout << subClass.GetData() << '\n';
 	subClass.SetData(20);
-	std::cout << subClass.GetData() << std::endl;
+	std::cout << subClass.GetData() << '\n';
 
 	std::cin.get();
 }

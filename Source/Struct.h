@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <vector>
 #include <iostream>
@@ -24,9 +25,9 @@ int main()
 
 	for(unsigned int i = 0; i < players.size(); i++)
 	{
-		std::cout << players[i].name << "\n";
+		std::cout << players[i].name << '\n';
 	}
 
-	std::cout << "\n" << "Player Count: " << players.size();
+	std::cout << '\n' << "Player Count: " << players.size() << '\n';
 	std::cin.get();
 }

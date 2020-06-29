@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 const int predicate = 10;

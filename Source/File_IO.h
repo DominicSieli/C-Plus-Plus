@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -19,7 +20,7 @@ int main()
 		{
 			getline(readFile, text);
 
-			std::cout << text << std::endl;
+			std::cout << text << '\n';
 		}
 
 		readFile.close();
@@ -37,7 +38,7 @@ int main()
 
 		for(int i = 1; i < 21; i++)
 		{
-			text += "Line: " + std::to_string(i) + "\n";
+			text += "Line: " + std::to_string(i) + '\n';
 		}
 
 		writeFile << text;

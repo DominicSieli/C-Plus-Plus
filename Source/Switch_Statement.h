@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 unsigned short currentScene = 2;
@@ -15,13 +16,13 @@ int main()
 
 	switch(scenes)
 	{
-		case Scenes::Scene_0 : std::cout << "Loaded Scene 0" << std::endl;
+		case Scenes::Scene_0 : std::cout << "Loaded Scene 0" << '\n';
 		break;
 
-		case Scenes::Scene_1 : std::cout << "Loaded Scene 1" << std::endl;
+		case Scenes::Scene_1 : std::cout << "Loaded Scene 1" << '\n';
 		break;
 
-		case Scenes::Scene_2 : std::cout << "Loaded Scene 2" << std::endl;
+		case Scenes::Scene_2 : std::cout << "Loaded Scene 2" << '\n';
 		break;
 
 		default :

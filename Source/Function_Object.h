@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 template<typename T>
@@ -18,11 +19,11 @@ int main()
 
 	if(functor(number) == true) // Predicate statement
 	{
-		std::cout << number << " < " << functor.GetValue() << std::endl;
+		std::cout << number << " < " << functor.GetValue() << '\n';
 	}
 	else
 	{
-		std::cout << number << " > " << functor.GetValue() << std::endl;
+		std::cout << number << " > " << functor.GetValue() << '\n';
 	}
 
 	std::cin.get();

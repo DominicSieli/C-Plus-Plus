@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 int main()
@@ -8,7 +9,7 @@ int main()
 	}
 	catch(std::length_error)
 	{
-		std::cout << "Cannot devide by zero!" << std::endl;
+		std::cout << "Cannot devide by zero!" << '\n';
 	} */
 
 	//throw std::out_of_range("List container");

@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 int variable = 200; // Mutable variable
@@ -21,9 +22,9 @@ public:
 
 int main()
 {
-	std::cout << "Value of CONSTANT: " << *constValue << std::endl; // Print value of CONSTANT
-	std::cout << "Value of constAddress: " << *constAddress << std::endl; // Print value of constAddress
-	std::cout << "Address of constAddress: " << constAddress << std::endl; // Print address of constAddress
+	std::cout << "Value of CONSTANT: " << *constValue << '\n'; // Print value of CONSTANT
+	std::cout << "Value of constAddress: " << *constAddress << '\n'; // Print value of constAddress
+	std::cout << "Address of constAddress: " << constAddress << '\n'; // Print address of constAddress
 
 	std::cin.get(); // Wait for input
 }

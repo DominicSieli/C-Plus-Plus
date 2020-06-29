@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <iostream>
 
@@ -11,9 +12,9 @@ int main()
 	std::string appartment = "Apt. 2432 ";
 	std::string address = street + appartment;
 
-	std::cout << "Name: " << name << std::endl;
-	std::cout << "Address: " << address << std::endl;
-	std::cout << "Initials: " << name[0] << "." << name[8] << "." << std::endl;
-	std::cout << "Appatrment #: " << appartment.substr(5,4) << std::endl;
-	std::cout << "Letters in name: " << (name.length() - 1) << std::endl;
+	std::cout << "Name: " << name << '\n';
+	std::cout << "Address: " << address << '\n';
+	std::cout << "Initials: " << name[0] << "." << name[8] << "." << '\n';
+	std::cout << "Appatrment #: " << appartment.substr(5,4) << '\n';
+	std::cout << "Letters in name: " << (name.length() - 1) << '\n';
 }

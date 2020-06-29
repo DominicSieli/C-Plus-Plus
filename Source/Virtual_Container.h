@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 template<typename T>
@@ -30,7 +31,7 @@ int main()
     for(unsigned int i = 0; i < vector.Size(); i++)
     {
         vector[i] = i;
-        std::cout << vector[i] << std::endl;
+        std::cout << vector[i] << '\n';
     }
 
     std::cin.get();

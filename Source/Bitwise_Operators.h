@@ -1,3 +1,4 @@
+#pragma once
 #include <bitset>
 #include <iostream>
 
@@ -8,44 +9,44 @@ std::bitset<4> b_0011 = 0b0011; // Binary notation
 
 int main()
 {
-    std::cout << "NOT - ~" << std::endl;
-    std::cout << " " << b_1010 << std::endl;
-    std::cout << "=" << ~b_1010 << std::endl;
+    std::cout << "NOT - ~" << '\n';
+    std::cout << " " << b_1010 << '\n';
+    std::cout << "=" << ~b_1010 << '\n';
 
-    std::cout << std::endl;
+    std::cout << '\n';
 
-    std::cout << "AND - &" << std::endl;
-    std::cout << " " << b_1010 << std::endl;
-    std::cout << " " << b_1100 << std::endl;
-    std::cout << "=" << (b_1010 & b_1100) << std::endl;
+    std::cout << "AND - &" << '\n';
+    std::cout << " " << b_1010 << '\n';
+    std::cout << " " << b_1100 << '\n';
+    std::cout << "=" << (b_1010 & b_1100) << '\n';
 
-    std::cout << std::endl;
+    std::cout << '\n';
 
-    std::cout << "OR - |" << std::endl;
-    std::cout << " " << b_1010 << std::endl;
-    std::cout << " " << b_1100 << std::endl;
-    std::cout << "=" << (b_1010 | b_1100) << std::endl;
+    std::cout << "OR - |" << '\n';
+    std::cout << " " << b_1010 << '\n';
+    std::cout << " " << b_1100 << '\n';
+    std::cout << "=" << (b_1010 | b_1100) << '\n';
 
-    std::cout << std::endl;
+    std::cout << '\n';
 
-    std::cout << "XOR - ^" << std::endl;
-    std::cout << " " << b_1010 << std::endl;
-    std::cout << " " << b_1100 << std::endl;
-    std::cout << "=" << (b_1010 ^ b_1100) << std::endl;
+    std::cout << "XOR - ^" << '\n';
+    std::cout << " " << b_1010 << '\n';
+    std::cout << " " << b_1100 << '\n';
+    std::cout << "=" << (b_1010 ^ b_1100) << '\n';
 
-    std::cout << std::endl;
+    std::cout << '\n';
 
-    std::cout << "Shift Left by 1 - 1010 << 1" << std::endl;
-    std::cout << " " << b_1010 << std::endl;
-    std::cout << "=" << (b_1010 << 1) << std::endl;
+    std::cout << "Shift Left by 1 - 1010 << 1" << '\n';
+    std::cout << " " << b_1010 << '\n';
+    std::cout << "=" << (b_1010 << 1) << '\n';
 
-    std::cout << std::endl;
+    std::cout << '\n';
 
-    std::cout << "Shift Right by 1 - 1010 >> 1" << std::endl;
-    std::cout << " " << b_1010 << std::endl;
-    std::cout << "=" << (b_1010 >> 1) << std::endl;
+    std::cout << "Shift Right by 1 - 1010 >> 1" << '\n';
+    std::cout << " " << b_1010 << '\n';
+    std::cout << "=" << (b_1010 >> 1) << '\n';
 
-    std::cout << std::endl;
+    std::cout << '\n';
 
 	std::cin.get();
 }

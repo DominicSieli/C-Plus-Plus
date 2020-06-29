@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <vector>
 #include <iostream>
@@ -38,13 +39,13 @@ std::vector<std::string> Substrings(const std::string& string, const char& separ
 
 int main()
 {
+	//std::vector<std::string> string = Substrings(get_current_dir_name(), '/');
 	std::string string = "Substring_1-Substring_2-Substring_3-Substring_4-Substring_5-Substring_6-Substring_7-Substring_8";
-	//std::vector<std::string> substrings = Substrings(get_current_dir_name(), '/');
 	std::vector<std::string> substrings = Substrings(string, '-');
 
 	for(unsigned int i = 0; i < substrings.size(); i++)
 	{
-		std::cout << substrings[i] << std::endl;
+		std::cout << substrings[i] << '\n';
 	}
 
 	std::cin.get();

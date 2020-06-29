@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 class Complex
@@ -30,8 +31,8 @@ int main()
 {
 	Complex complex(2.00, 4.00);
 
-	std::cout << complex.Real() << std::endl;
-	std::cout << complex.Imaginary() << std::endl;
+	std::cout << complex.Real() << '\n';
+	std::cout << complex.Imaginary() << '\n';
 
 	std::cin.get();
 }

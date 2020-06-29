@@ -1,3 +1,4 @@
+#pragma once
 #include <bitset>
 #include <iomanip>
 #include <iostream>
@@ -8,18 +9,18 @@ unsigned int hexadecimal = 0xa; // Hexadecimal notation
 
 int main()
 {
-    std::cout << "Integer: " << std::dec << binary << std::endl;
-	std::cout << "Binary: " << std::bitset<4>(binary) << std::endl;
+    std::cout << "Integer: " << std::dec << binary << '\n';
+	std::cout << "Binary: " << std::bitset<4>(binary) << '\n';
 
     std::cout << "\n";
 
-    std::cout << "Integer: " << std::dec << octal << std::endl;
-	std::cout << "Octal: " << std::oct << octal << std::endl;
+    std::cout << "Integer: " << std::dec << octal << '\n';
+	std::cout << "Octal: " << std::oct << octal << '\n';
 
     std::cout << "\n";
 
-    std::cout << "Integer: " << std::dec << hexadecimal << std::endl;
-	std::cout << "Hexadecimal: " << std::hex << hexadecimal << std::endl;
+    std::cout << "Integer: " << std::dec << hexadecimal << '\n';
+	std::cout << "Hexadecimal: " << std::hex << hexadecimal << '\n';
 
 	std::cin.get();
 }

@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 unsigned int Factorial(unsigned int n)
@@ -14,6 +15,6 @@ unsigned int Factorial(unsigned int n)
 
 int main()
 {
-	std::cout << Factorial(6) << std::endl;
+	std::cout << Factorial(6) << '\n';
 	std::cin.get();
 }
