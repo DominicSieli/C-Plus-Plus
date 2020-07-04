@@ -4,6 +4,6 @@ cd ../..
 
 mkdir -p Assembly/Linux
 
-projectName=${PWD##*/}_Assembly_Optimized
+title=${PWD##*/}_Optimized.asm
 
-g++ -S -O3 -std=c++17 Source/*.cpp -o Assembly/Linux/$projectName
+g++ -S -O3 -std=c++17 Source/*.cpp -o Assembly/Linux/$title

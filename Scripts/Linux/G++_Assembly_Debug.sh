@@ -4,6 +4,6 @@ cd ../..
 
 mkdir -p Assembly/Linux
 
-projectName=${PWD##*/}_Assembly_Debug
+title=${PWD##*/}_Debug.asm
 
-g++ -S -g -Wall -std=c++17 Source/*.cpp -o Assembly/Linux/$projectName
+g++ -S -g -Wall -std=c++17 Source/*.cpp -o Assembly/Linux/$title

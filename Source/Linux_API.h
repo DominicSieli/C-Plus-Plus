@@ -1,10 +1,16 @@
 #pragma once
 #include <iostream>
-#include <sys/inotify.h>
+#include <sys/sysinfo.h>
 
 int main()
 {
-	system("sudo apt autoremove");
-	system("clear");
-	std::cin.get();
+	struct sysinfo info;
+
+	while (true)
+	{
+		sysinfo(&info);
+		system("clear");
+		std::cout << "CPU: " << info.bufferram << '\n';
+		std::cout << "Ram: " << info.totalram - info.freeram << '\n';
+	}
 }

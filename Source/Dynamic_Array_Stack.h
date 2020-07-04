@@ -4,24 +4,23 @@
 
 namespace DataStructures
 {
-	template<typename T>
+	template <typename T>
 	struct DynamicArrayStack
 	{
 	private:
-		T* stack = nullptr;
+		T *stack = nullptr;
 		unsigned int size = 0;
 		unsigned int count = 0;
 
 	public:
-		DynamicArrayStack(const unsigned int& size) :
-			stack(new T[size + 1]), size(size + 1)
+		DynamicArrayStack(const unsigned int &size) : stack(new T[size + 1]), size(size + 1)
 		{
-
 		}
 
 		~DynamicArrayStack()
 		{
 			delete[] this->stack;
+			this->stack = nullptr;
 		}
 
 		bool IsEmpty() const
@@ -29,14 +28,14 @@ namespace DataStructures
 			return this->count == 0;
 		}
 
-		void Push(const T& data)
+		void Push(const T &data)
 		{
 			this->count++;
 
-			if(this->count + 1 > this->size)
+			if (this->count + 1 > this->size)
 			{
 				this->size++;
-				T* newStack = new T[this->size];
+				T *newStack = new T[this->size];
 				memcpy(newStack, this->stack, this->count * sizeof(T));
 
 				delete[] this->stack;
@@ -56,4 +55,4 @@ namespace DataStructures
 			return this->stack[this->count];
 		}
 	};
-}
+} // namespace DataStructures
