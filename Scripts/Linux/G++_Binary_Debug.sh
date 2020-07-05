@@ -4,7 +4,7 @@ cd ../..
 
 mkdir -p Binaries/Linux
 
-title=${PWD##*/}_Debug.bin
+title=${PWD##*/}_Debug
 
 g++ -g -Wall -std=c++17 Source/*.cpp -o Binaries/Linux/$title
 
