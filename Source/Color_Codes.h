@@ -1,6 +1,9 @@
 #pragma once
 
-enum LinuxColor : unsigned int
+#include "Configuration.h"
+
+#ifdef LINUX
+enum Color : unsigned short int
 {
 	RED = 31,
 	BLUE = 34,
@@ -10,3 +13,17 @@ enum LinuxColor : unsigned int
 	YELLOW = 33,
 	MAGENTA = 35
 };
+#endif
+
+#ifdef WINDOWS
+enum Color : unsigned short int
+{
+	RED = 12,
+	BLUE = 9,
+	CYAN = 11,
+	GREEN = 10,
+	WHITE = 15,
+	YELLOW = 14,
+	MAGENTA = 13
+};
+#endif

@@ -1,11 +1,12 @@
 #pragma once
+
 #include <bitset>
 #include <iostream>
 
-std::bitset<4> b_1010 = 0b1010; // Binary notation
-std::bitset<4> b_0101 = 0b0101; // Binary notation
-std::bitset<4> b_1100 = 0b1100; // Binary notation
-std::bitset<4> b_0011 = 0b0011; // Binary notation
+std::bitset<4> b_1010 = 0b1010;
+std::bitset<4> b_0101 = 0b0101;
+std::bitset<4> b_1100 = 0b1100;
+std::bitset<4> b_0011 = 0b0011;
 
 int main()
 {
@@ -48,5 +49,5 @@ int main()
 
     std::cout << '\n';
 
-	std::cin.get();
+    std::cin.get();
 }

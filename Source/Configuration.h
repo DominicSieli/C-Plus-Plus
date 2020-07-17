@@ -1,7 +1,3 @@
 #pragma once
-
-// Platform
-#define LINUX
-
-// Mode
+#define WINDOWS
 #define DEBUG
