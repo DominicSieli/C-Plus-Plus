@@ -5,7 +5,7 @@
 #include "Color_Codes.h"
 #include "Configuration.h"
 
-#ifdef DEBUG_MODE
+#ifdef DEBUG
 
 #ifdef LINUX
 #define LOG_RED(...) std::cout << "\033[1;" << Color::RED << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
