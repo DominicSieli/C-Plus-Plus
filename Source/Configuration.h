@@ -1,2 +1,3 @@
 #pragma once
-#define WINDOWS
+#define LINUX
+#define DEBUG_MODE
