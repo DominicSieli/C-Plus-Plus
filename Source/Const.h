@@ -1,11 +1,11 @@
 #pragma once
+
 #include <iostream>
 
-int variable = 200; // Mutable variable
-const int CONSTANT = 100; // Immutable value
-const int* constValue = &variable; // constValue* points to address of &variable
-int* const constAddress = &variable; // constAddress* points to address of &variable
-const int* const constValueAndAddress = &variable; // constValueAndAddress* points to address of &variable
+constexpr int CONSTANT = 2 * 2;
+const int *CONSTANT_VALUE = &CONSTANT;
+int const *CONSTANT_ADDRESS = &CONSTANT;
+const int *const CONSTANT_VALUE_AND_ADDRESS = &CONSTANT;
 
 class ConstClass
 {
@@ -13,8 +13,7 @@ private:
 	int data = 400;
 
 public:
-	// Returns a const int& reference and cannot modify member variables and also cannot call non-const functions
-	const int& ConstFunction() const
+	const int &ConstMethod() const
 	{
 		return this->data;
 	}
@@ -22,9 +21,14 @@ public:
 
 int main()
 {
-	std::cout << "Value of CONSTANT: " << *constValue << '\n'; // Print value of CONSTANT
-	std::cout << "Value of constAddress: " << *constAddress << '\n'; // Print value of constAddress
-	std::cout << "Address of constAddress: " << constAddress << '\n'; // Print address of constAddress
+	ConstClass constClass;
 
-	std::cin.get(); // Wait for input
+	std::cout << "Value of ConstClass data: " << constClass.ConstMethod() << '\n';
+
+	std::cout << "Value of CONSTANT: " << *CONSTANT_VALUE << '\n';
+	std::cout << "Address of CONSTANT: " << CONSTANT_ADDRESS << '\n';
+	std::cout << "Value of CONSTANT_VALUE_AND_ADDRESS: " << *CONSTANT_VALUE_AND_ADDRESS << '\n';
+	std::cout << "Address of CONSTANT_VALUE_AND_ADDRESS: " << CONSTANT_VALUE_AND_ADDRESS << '\n';
+
+	std::cin.get();
 }
