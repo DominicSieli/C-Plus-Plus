@@ -8,25 +8,25 @@
 #ifdef DEBUG
 
 #ifdef LINUX
-#define LOG_RED(...) std::cout << "\033[1;" << Color::RED << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
-#define LOG_BLUE(...) std::cout << "\033[1;" << Color::BLUE << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
-#define LOG_CYAN(...) std::cout << "\033[1;" << Color::CYAN << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
-#define LOG_GREEN(...) std::cout << "\033[1;" << Color::GREEN << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
-#define LOG_WHITE(...) std::cout << "\033[1;" << Color::WHITE << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
-#define LOG_YELLOW(...) std::cout << "\033[1;" << Color::YELLOW << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
-#define LOG_MAGENTA(...) std::cout << "\033[1;" << Color::MAGENTA << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
+#define LOG_RED(...) std::cout << "\033[1;" << COLOR::RED << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
+#define LOG_BLUE(...) std::cout << "\033[1;" << COLOR::BLUE << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
+#define LOG_CYAN(...) std::cout << "\033[1;" << COLOR::CYAN << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
+#define LOG_GREEN(...) std::cout << "\033[1;" << COLOR::GREEN << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
+#define LOG_WHITE(...) std::cout << "\033[1;" << COLOR::WHITE << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
+#define LOG_YELLOW(...) std::cout << "\033[1;" << COLOR::YELLOW << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
+#define LOG_MAGENTA(...) std::cout << "\033[1;" << COLOR::MAGENTA << "m" << (__VA_ARGS__) << "\033[0m" << '\n';
 #endif
 
 #ifdef WINDOWS
 #include <windows.h>
 HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
-#define LOG_RED(...) SetConsoleTextAttribute(console, Color::RED); std::cout << (__VA_ARGS__) << std::endl;
-#define LOG_BLUE(...) SetConsoleTextAttribute(console, Color::BLUE); std::cout << (__VA_ARGS__) << std::endl;
-#define LOG_CYAN(...) SetConsoleTextAttribute(console, Color::CYAN); std::cout << (__VA_ARGS__) << std::endl;
-#define LOG_GREEN(...) SetConsoleTextAttribute(console, Color::GREEN); std::cout << (__VA_ARGS__) << std::endl;
-#define LOG_WHITE(...) SetConsoleTextAttribute(console, Color::WHITE); std::cout << (__VA_ARGS__) << std::endl;
-#define LOG_YELLOW(...) SetConsoleTextAttribute(console, Color::YELLOW); std::cout << (__VA_ARGS__) << std::endl;
-#define LOG_MAGENTA(...) SetConsoleTextAttribute(console, Color::MAGENTA); std::cout << (__VA_ARGS__) << std::endl;
+#define LOG_RED(...) SetConsoleTextAttribute(console, COLOR::RED); std::cout << (__VA_ARGS__) << std::endl;
+#define LOG_BLUE(...) SetConsoleTextAttribute(console, COLOR::BLUE); std::cout << (__VA_ARGS__) << std::endl;
+#define LOG_CYAN(...) SetConsoleTextAttribute(console, COLOR::CYAN); std::cout << (__VA_ARGS__) << std::endl;
+#define LOG_GREEN(...) SetConsoleTextAttribute(console, COLOR::GREEN); std::cout << (__VA_ARGS__) << std::endl;
+#define LOG_WHITE(...) SetConsoleTextAttribute(console, COLOR::WHITE); std::cout << (__VA_ARGS__) << std::endl;
+#define LOG_YELLOW(...) SetConsoleTextAttribute(console, COLOR::YELLOW); std::cout << (__VA_ARGS__) << std::endl;
+#define LOG_MAGENTA(...) SetConsoleTextAttribute(console, COLOR::MAGENTA); std::cout << (__VA_ARGS__) << std::endl;
 #endif
 
 #else

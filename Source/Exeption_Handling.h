@@ -1,18 +1,27 @@
 #pragma once
+
 #include <iostream>
+
+int quotient = 0;
+int numerator = 10;
+int denominator = 0;
 
 int main()
 {
-/* 	try
+	try
 	{
-		10/0;
+		if (denominator == 0)
+		{
+			throw denominator;
+		}
+
+		quotient = numerator / denominator;
 	}
-	catch(std::length_error)
+	catch (int ex)
 	{
-		std::cout << "Cannot devide by zero!" << '\n';
-	} */
+		std::cout << "Divide by 0 error!: " << ex << '\n';
+	}
 
-	//throw std::out_of_range("List container");
-
+	std::cout << "Quotient = " << quotient << '\n';
 	std::cin.get();
 }

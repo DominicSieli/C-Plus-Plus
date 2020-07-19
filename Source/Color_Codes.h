@@ -3,7 +3,7 @@
 #include "Configuration.h"
 
 #ifdef LINUX
-enum Color : unsigned short int
+enum COLOR : unsigned short int
 {
 	RED = 31,
 	BLUE = 34,
@@ -16,7 +16,7 @@ enum Color : unsigned short int
 #endif
 
 #ifdef WINDOWS
-enum Color : unsigned short int
+enum COLOR : unsigned short int
 {
 	RED = 12,
 	BLUE = 9,
