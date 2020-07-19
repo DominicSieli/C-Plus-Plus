@@ -55,4 +55,4 @@ namespace DataStructures
 			return this->stack[this->count];
 		}
 	};
-} // namespace DataStructures
+}

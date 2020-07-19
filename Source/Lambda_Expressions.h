@@ -1,21 +1,21 @@
 #pragma once
-#include <cmath>    // Preprocessor directive includes cmath file
-#include <iostream> // Preprocessor directive includes iostream file
 
-auto Square = [](int n) -> int { return n * n; };         // Lambda funcion squares n
-auto Sum = [](int n1, int n2) -> int { return n1 + n2; }; // Lambda funcion sums n1 and n2
+#include <iostream>
 
-int main() // Main function is the executables entry point
+auto Square = [](int n) -> int { return n * n; };
+auto Sum = [](int n1, int n2) -> int { return n1 + n2; };
+
+int main()
 {
-    int n = 64;
-    auto SquareRoot = [=]() -> int { return sqrt(n); }; // Lambda captures all local variables (n) in captue clause[n] by value
+    int n = 8;
 
-    std::cout << Sum(2, 6) << '\n';
-    std::cout << Square(4) << '\n';
-    std::cout << SquareRoot() << '\n';
+    std::cout << Sum(n, n) << '\n';
+    std::cout << Square(n) << '\n';
 
-    [&](int x = 4) { n -= x; }(4); // Lambda captures all local variables (n) in captue clause[n] by reference
-    std::cout << n << '\n';
+    std::cout << '\n';
 
-    std::cin.get(); // Waits for console input from user
+    [=]() { std::cout << n + n << '\n'; }();
+    [&]() { std::cout << n * n << '\n'; }();
+
+    std::cin.get();
 }
