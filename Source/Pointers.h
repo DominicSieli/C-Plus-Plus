@@ -1,13 +1,20 @@
 #pragma once
+
 #include <iostream>
+
+int integer = 10;
+int *pointer = &integer;
+int **pointerPointer = &pointer;
 
 int main()
 {
-	int i = 10; // Integer i equals 10
-	int* p = &i; // Integer* pointer p equals address of integer &i
+	std::cout << "Value of integer: " << *pointer << '\n';
+	std::cout << "Address of integer: " << pointer << '\n';
 
-	std::cout << "Value of i: " << *p << '\n'; // Print value of i
-	std::cout << "Address of i: " << p << '\n'; // Print address of i
+	std::cout << '\n';
 
-	std::cin.get(); // Wait for input
+	std::cout << "Value of integer: " << **pointerPointer << '\n';
+	std::cout << "Address of pointer: " << *pointerPointer << '\n';
+
+	std::cin.get();
 }

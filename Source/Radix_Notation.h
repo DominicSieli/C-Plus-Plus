@@ -1,26 +1,29 @@
 #pragma once
+
 #include <bitset>
 #include <iomanip>
 #include <iostream>
 
-unsigned int octal = 012; // Octal notation
-unsigned int binary = 0b1010; // Binary notation
-unsigned int hexadecimal = 0xa; // Hexadecimal notation
-
 int main()
 {
-    std::cout << "Integer: " << std::dec << binary << '\n';
-	std::cout << "Binary: " << std::bitset<4>(binary) << '\n';
+    for(unsigned int decimal = 0; decimal < 16; decimal++)
+    {
+        std::cout << "Decimal: " << std::dec << decimal << " = " << "Binary: " << "0b" << std::bitset<4>(decimal) << '\n';
+    }
 
     std::cout << "\n";
 
-    std::cout << "Integer: " << std::dec << octal << '\n';
-	std::cout << "Octal: " << std::oct << octal << '\n';
+    for(unsigned int decimal = 0; decimal < 16; decimal++)
+    {
+        std::cout << "Decimal: " << std::dec << decimal << " = " << "Octal: " << "0" << std::oct << decimal << '\n';
+    }
 
     std::cout << "\n";
 
-    std::cout << "Integer: " << std::dec << hexadecimal << '\n';
-	std::cout << "Hexadecimal: " << std::hex << hexadecimal << '\n';
+    for(unsigned int decimal = 0; decimal < 16; decimal++)
+    {
+        std::cout << "Decimal: " << std::dec << decimal << " = " << "Hexadecimal: " << "0x" << std::hex << decimal << '\n';
+    }
 
-	std::cin.get();
+    std::cin.get();
 }
