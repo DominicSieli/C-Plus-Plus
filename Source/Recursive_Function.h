@@ -1,7 +1,10 @@
 #pragma once
+
 #include <iostream>
 
-unsigned int Factorial(unsigned int n)
+#include "System_Commands.h"
+
+unsigned long long Factorial(unsigned int n)
 {
     if(n > 1)
     {
@@ -13,8 +16,14 @@ unsigned int Factorial(unsigned int n)
     }
 }
 
+unsigned int n = 0;
+
 int main()
 {
-	std::cout << Factorial(6) << '\n';
-	std::cin.get();
+	while(true)
+    {
+        std::cin >> n;
+        std::cout << Factorial(n) << '\n';
+	    std::cin.get();
+    }
 }
