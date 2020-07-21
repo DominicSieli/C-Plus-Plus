@@ -1,4 +1,5 @@
 #pragma once
+
 #include <string>
 #include <vector>
 #include <iostream>
@@ -9,7 +10,8 @@ struct Player
 	std::string name;
 	unsigned int health;
 
-	Player(std::string name) : active(true), name(name), health(100){}
+	Player(std::string name) :
+		active(true), name(name), health(100){}
 	~Player(){}
 };
 
@@ -29,5 +31,6 @@ int main()
 	}
 
 	std::cout << '\n' << "Player Count: " << players.size() << '\n';
+
 	std::cin.get();
 }

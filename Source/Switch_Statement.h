@@ -1,4 +1,5 @@
 #pragma once
+
 #include <iostream>
 
 unsigned short currentScene = 2;

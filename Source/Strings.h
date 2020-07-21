@@ -1,4 +1,5 @@
 #pragma once
+
 #include <string>
 #include <iostream>
 
@@ -15,6 +16,8 @@ int main()
 	std::cout << "Name: " << name << '\n';
 	std::cout << "Address: " << address << '\n';
 	std::cout << "Initials: " << name[0] << "." << name[8] << "." << '\n';
-	std::cout << "Appatrment #: " << appartment.substr(5,4) << '\n';
+	std::cout << "Appatrment: " << appartment.substr(5,4) << '\n';
 	std::cout << "Letters in name: " << (name.length() - 1) << '\n';
+
+	std::cin.get();
 }

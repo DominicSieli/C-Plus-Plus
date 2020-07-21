@@ -1,63 +1,19 @@
-#include <initializer_list>
+#pragma once
+
+#include <iostream>
 
 template <typename T>
-void RangeIterator(T &variable, char sign, T value, T min, T max)
+void Print(const T &input)
 {
-	T sum = 0;
+	std::cout << input << '\n';
+}
 
-	if (sign == '+')
-	{
-		sum = variable + value;
+int main()
+{
+	Print(2);
+	Print(2.2);
+	Print('A');
+	Print("Dominic");
 
-		if (sum > max || sum < variable)
-		{
-			sum = max;
-		}
-
-		variable = sum;
-	}
-
-	if (sign == '*')
-	{
-		sum = variable * value;
-
-		if (sum > max || sum < variable)
-		{
-			sum = (variable * value) / value;
-		}
-
-		variable = sum;
-	}
-
-	if (sign == '-')
-	{
-		sum = variable - value;
-
-		if (sum < min || sum > variable)
-		{
-			sum = min;
-		}
-
-		variable = sum;
-	}
-
-	if (sign == '/')
-	{
-		if (variable != 0 && value != 0)
-		{
-			sum = variable / value;
-
-			if (sum < min || sum > variable)
-			{
-				sum = (variable / value) * value;
-			}
-
-			variable = sum;
-		}
-	}
-
-	if (sign != '+' && sign != '-' && sign != '*' && sign != '/')
-	{
-		variable = variable;
-	}
+	std::cin.get();
 }
