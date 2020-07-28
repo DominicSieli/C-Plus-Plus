@@ -2,19 +2,37 @@
 
 #include <iostream>
 
-#define DLL_EXPORT
+#include "Configuration.h"
 
 extern "C"
 {
+
+#ifdef LINUX
+
 #ifdef DLL_EXPORT
-#define DLL __declspec(dllexport)
-#else
-#define DLL __declspec(dllimport)
+#define API __declspec(dllexport)
 #endif
 
-        __stdcall void DLL_Test()
+#ifdef DLL_IMPORT
+#define API __declspec(dllimport)
+#endif
+
+#endif
+
+#ifdef WINDOWS
+
+#ifdef DLL_EXPORT
+#define API __declspec(dllexport)
+#endif
+
+#ifdef DLL_IMPORT
+#define API __declspec(dllimport)
+#endif
+
+#endif
+
+        void API DLL_Test()
         {
-                std::cout << "DLL Success!" << '\n';
+                std::cout << "Success!" << '\n';
         }
 }
-#endif
