@@ -1,36 +1,32 @@
 #pragma once
 
-#include <string>
 #include <vector>
+#include <iomanip>
 #include <iostream>
+#include <type_traits>
 
-struct Player
+struct Struct
 {
-	bool active;
-	std::string name;
-	unsigned int health;
-
-	Player(std::string name) :
-		active(true), name(name), health(100){}
-	~Player(){}
+	unsigned int data;
 };
 
-std::vector<Player> players;
+std::vector<Struct> structs;
 
 int main()
 {
 	for(unsigned int i = 0; i < 10; i++)
 	{
-		Player player("Player" + std::to_string(i));
-		players.push_back(player);
+		Struct newStruct;
+		newStruct.data = 0;
+		structs.push_back(newStruct);
 	}
 
-	for(unsigned int i = 0; i < players.size(); i++)
+	for(unsigned int i = 0; i < structs.size(); i++)
 	{
-		std::cout << players[i].name << '\n';
+		std::cout << structs[i].data << '\n';
 	}
 
-	std::cout << '\n' << "Player Count: " << players.size() << '\n';
-
+	std::cout << '\n' << "Struct size : " << sizeof(Struct);
+	std::cout << '\n' << "Struct is plain old data : " << std::boolalpha << std::is_pod<Struct>{} << '\n';
 	std::cin.get();
 }

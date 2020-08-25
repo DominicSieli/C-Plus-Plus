@@ -2,32 +2,31 @@
 
 #include <iostream>
 
-unsigned short currentScene = 2;
+unsigned short currentNumber = 2;
+
+enum class Data : unsigned short
+{
+	Data_0,
+	Data_1,
+	Data_2
+};
 
 int main()
 {
-	enum class Scenes : unsigned short
+	Data data = (Data)currentNumber;
+
+	switch(data)
 	{
-		Scene_0,
-		Scene_1,
-		Scene_2
-	};
-
-	Scenes scenes = (Scenes)currentScene;
-
-	switch(scenes)
-	{
-		case Scenes::Scene_0 : std::cout << "Loaded Scene 0" << '\n';
+		case Data::Data_0 : std::cout << "Loaded Data 0" << '\n';
 		break;
 
-		case Scenes::Scene_1 : std::cout << "Loaded Scene 1" << '\n';
+		case Data::Data_1 : std::cout << "Loaded Data 1" << '\n';
 		break;
 
-		case Scenes::Scene_2 : std::cout << "Loaded Scene 2" << '\n';
+		case Data::Data_2 : std::cout << "Loaded Data 2" << '\n';
 		break;
 
-		default :
-		break;
+		default : break;
 	}
 
 	std::cin.get();
