@@ -1,5 +1,3 @@
-#pragma once
-
 #include <iostream>
 
 unsigned short currentNumber = 2;

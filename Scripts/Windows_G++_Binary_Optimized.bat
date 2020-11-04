@@ -5,9 +5,8 @@ mkdir Binaries
 echo #pragma once > Source\Configuration.h
 echo #define WINDOWS >> Source\Configuration.h
 
-for %%I in (.) do set project=%%~nxI
-set file=%project%_%~n0
+set /p file="Source File: "
 
-g++ -O3 -std=c++17 Source/*.cpp -o Binaries/%file%
+g++ -O3 -std=c++17 Source/%file%.cpp -o Binaries/%file%_%~n0.exe
 
-start Binaries/%file%
+start Binaries/%file%_%~n0.exe

@@ -5,7 +5,6 @@ mkdir Assembly
 echo #pragma once > Source\Configuration.h
 echo #define WINDOWS >> Source\Configuration.h
 
-for %%I in (.) do set project=%%~nxI
-set file=%project%_%~n0
+set /p file="Source File: "
 
-g++ -S -O3 -std=c++17 Source/*.cpp -o Assembly/%file%
+g++ -S -O3 -std=c++17 Source/%file%.cpp -o Assembly/%file%_%~n0

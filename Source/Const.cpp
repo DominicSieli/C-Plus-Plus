@@ -1,5 +1,3 @@
-#pragma once
-
 #include <iostream>
 
 constexpr int CONSTANT = 2 * 2;

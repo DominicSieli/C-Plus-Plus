@@ -1,5 +1,3 @@
-#pragma once
-
 #include <bitset>
 #include <iomanip>
 #include <iostream>

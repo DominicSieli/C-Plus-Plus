@@ -1,5 +1,3 @@
-#pragma once
-
 #include <iostream>
 
 double d = 10.50;

@@ -1,5 +1,3 @@
-#pragma once
-
 #include <iostream>
 
 bool isTrue = (1>0) ? true : false;

@@ -1,5 +1,3 @@
-#pragma once
-
 #include <iostream>
 
 auto Square = [](int n) -> int { return n * n; };
