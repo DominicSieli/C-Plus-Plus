@@ -1,6 +1,6 @@
 #include <iostream>
 
-unsigned short currentNumber = 2;
+unsigned short number = 2;
 
 enum class Data : unsigned short
 {
@@ -11,7 +11,7 @@ enum class Data : unsigned short
 
 int main()
 {
-	Data data = (Data)currentNumber;
+	Data data = (Data)number;
 
 	switch(data)
 	{

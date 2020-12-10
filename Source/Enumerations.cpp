@@ -1,47 +1,40 @@
 #include <iostream>
 
-enum
-{
-	anonymousInt_0,
-	anonymousInt_1,
-	anonymousInt_2
-};
-
 enum : unsigned short
 {
-	anonymousUnsignedShort_0,
-	anonymousUnsignedShort_1,
-	anonymousUnsignedShort_2
+	Anonymous_0,
+	Anonymous_1,
+	Anonymous_2
 };
 
 enum Enum : unsigned short
 {
-	EnumData_0,
-	EnumData_1,
-	EnumData_2
+	Enum_0,
+	Enum_1,
+	Enum_2
 };
 
-enum class EnumClass : unsigned short
+enum class Enum_Class : unsigned short
 {
-	EnumClassData_0,
-	EnumClassData_1,
-	EnumClassData_2
+	Enum_Class_0,
+	Enum_Class_1,
+	Enum_Class_2
 };
 
 int main()
 {
 	unsigned short enumeration = 0;
-	EnumClass enumClass = (EnumClass)enumeration;
+	Enum_Class enum_Class = (Enum_Class)enumeration;
 
-	switch(enumClass)
+	switch(enum_Class)
 	{
-		case EnumClass::EnumClassData_0 : std::cout << "Loaded Data 0" << '\n';
+		case Enum_Class::Enum_Class_0 : std::cout << "Loaded Data 0" << '\n';
 		break;
 
-		case EnumClass::EnumClassData_1 : std::cout << "Loaded Data 1" << '\n';
+		case Enum_Class::Enum_Class_1 : std::cout << "Loaded Data 1" << '\n';
 		break;
 
-		case EnumClass::EnumClassData_2 : std::cout << "Loaded Data 2" << '\n';
+		case Enum_Class::Enum_Class_2 : std::cout << "Loaded Data 2" << '\n';
 		break;
 
 		default : break;

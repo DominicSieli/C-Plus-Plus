@@ -3,8 +3,8 @@
 int a = 10;
 auto b = a;
 decltype(a) c = a;
-using using_aType = decltype(a); using_aType d = a;
-typedef decltype(a) typedef_aType; typedef_aType e = a;
+using using_Type = decltype(a); using_Type d = a;
+typedef decltype(a) typedef_Type; typedef_Type e = a;
 
 int main()
 {

@@ -1,8 +1,6 @@
 #include <iostream>
 
-#include "System_Commands.h"
-
-unsigned long long Factorial(unsigned int n)
+unsigned long long Factorial(const unsigned long long& n)
 {
     if(n > 1)
     {
@@ -22,6 +20,7 @@ int main()
     {
         std::cin >> n;
         std::cout << Factorial(n) << '\n';
-	    std::cin.get();
     }
+
+    std::cin.get();
 }

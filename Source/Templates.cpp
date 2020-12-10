@@ -1,7 +1,7 @@
 #include <iostream>
 
-template <typename T>
-void Print(const T &input)
+template<typename T>
+void Print(const T& input)
 {
 	std::cout << input << '\n';
 }

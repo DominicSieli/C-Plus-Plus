@@ -1,19 +1,22 @@
 #include <iostream>
+#include <functional>
 
-auto Square = [](int n) -> int { return n * n; };
-auto Sum = [](int n1, int n2) -> int { return n1 + n2; };
+auto Print_Square = [](int n) { std::cout << n*n << "\n"; };
+
+void Call_Print_Square(int n, std::function<void(int)> func)
+{
+	func(n);
+}
 
 int main()
 {
-    int n = 8;
+	int n = 8;
 
-    std::cout << Sum(n, n) << '\n';
-    std::cout << Square(n) << '\n';
+	Print_Square(n);
+	Call_Print_Square(n, Print_Square);
 
-    std::cout << '\n';
+	[=](int n) { std::cout << n*n << '\n'; }(n);
+	[&](int n) { std::cout << n*n << '\n'; }(n);
 
-    [=]() { std::cout << n + n << '\n'; }();
-    [&]() { std::cout << n * n << '\n'; }();
-
-    std::cin.get();
+	std::cin.get();
 }

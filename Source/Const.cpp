@@ -1,17 +1,17 @@
 #include <iostream>
 
 constexpr int CONSTANT = 2 * 2;
-const int *CONSTANT_VALUE = &CONSTANT;
-int const *CONSTANT_ADDRESS = &CONSTANT;
-const int *const CONSTANT_VALUE_AND_ADDRESS = &CONSTANT;
+const int* CONSTANT_VALUE = &CONSTANT;
+int const* CONSTANT_ADDRESS = &CONSTANT;
+const int* const CONSTANT_VALUE_AND_ADDRESS = &CONSTANT;
 
-class ConstClass
+class Const_Class
 {
 private:
 	int data = 400;
 
 public:
-	const int &ConstMethod() const
+	const int &Const_Method() const
 	{
 		return this->data;
 	}
@@ -19,10 +19,9 @@ public:
 
 int main()
 {
-	ConstClass constClass;
+	Const_Class const_Class;
 
-	std::cout << "Value of ConstClass data: " << constClass.ConstMethod() << '\n';
-
+	std::cout << "Value of Const_Class data: " << const_Class.Const_Method() << '\n';
 	std::cout << "Value of CONSTANT: " << *CONSTANT_VALUE << '\n';
 	std::cout << "Address of CONSTANT: " << CONSTANT_ADDRESS << '\n';
 	std::cout << "Value of CONSTANT_VALUE_AND_ADDRESS: " << *CONSTANT_VALUE_AND_ADDRESS << '\n';

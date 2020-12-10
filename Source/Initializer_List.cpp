@@ -1,21 +1,20 @@
 #include <iostream>
 #include <initializer_list>
 
-template <typename T>
-T Total(std::initializer_list<T> list)
+template<typename T>
+void Print(const std::initializer_list<T>& list)
 {
-	T total = 0;
-
-	for (T element : list)
+	for(T item : list)
 	{
-		total += element;
+		std::cout << item << " ";
 	}
 
-	return total;
+	std::cout << '\n';
 }
 
 int main()
 {
-	std::cout << Total<int>({1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) << '\n';
+	Print<int>({1, 2, 3, 4});
+
 	std::cin.get();
 }

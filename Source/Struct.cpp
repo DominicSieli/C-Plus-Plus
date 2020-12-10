@@ -26,5 +26,6 @@ int main()
 
 	std::cout << '\n' << "Struct size : " << sizeof(Struct);
 	std::cout << '\n' << "Struct is plain old data : " << std::boolalpha << std::is_pod<Struct>{} << '\n';
+
 	std::cin.get();
 }

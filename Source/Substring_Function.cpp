@@ -1,7 +1,6 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include <unistd.h>
 
 std::vector<std::string> Substrings(const std::string& string, const char& separator)
 {
@@ -38,7 +37,6 @@ std::vector<std::string> Substrings(const std::string& string, const char& separ
 
 int main()
 {
-	//std::vector<std::string> string = Substrings(get_current_dir_name(), '/');
 	std::string string = "Substring_1-Substring_2-Substring_3-Substring_4-Substring_5-Substring_6-Substring_7-Substring_8";
 	std::vector<std::string> substrings = Substrings(string, '-');
 

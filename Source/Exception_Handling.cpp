@@ -68,11 +68,9 @@ double Divide(double numerator, double denominator)
 int main()
 {
 	OutOfRange outOfRange;
-
 	outOfRange.AddData(10);
 
 	std::cout << outOfRange.GetData() << '\n';
-
 	std::cout << Divide(10.00, 0.00) << '\n';
 
 	std::cin.get();

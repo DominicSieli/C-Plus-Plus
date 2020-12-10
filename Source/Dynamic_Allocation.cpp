@@ -1,23 +1,19 @@
 #include <iostream>
 
-int *pointer = new int(10);
+int* int_pointer = new int(10);
 
 int main()
 {
-	std::cout << "Value of pointer: " << *pointer << '\n';
-	std::cout << "Address of pointer: " << pointer << '\n';
+	std::cout << "Value of int_pointer: " << *int_pointer << '\n';
+	std::cout << "Address of int_pointer: " << int_pointer << '\n';
 
-	delete pointer;
-	pointer = nullptr;
+	delete int_pointer;
+	int_pointer = nullptr;
 
-	if (pointer != nullptr)
+	if(int_pointer != nullptr)
 	{
-		std::cout << "Value of pointer: " << *pointer << '\n';
-	}
-
-	if (pointer != nullptr)
-	{
-		std::cout << "Address of pointer: " << pointer << '\n';
+		std::cout << "Value of int_pointer: " << *int_pointer << '\n';
+		std::cout << "Address of int_pointer: " << int_pointer << '\n';
 	}
 
 	std::cin.get();

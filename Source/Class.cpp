@@ -1,30 +1,30 @@
 #include <iostream>
 
-template <typename T>
-class AbstractBaseClass
+template<typename T>
+class Abstract_Base_Class
 {
 public:
-	virtual ~AbstractBaseClass() {}
-	virtual void SetData(T) = 0;
-	virtual int GetData() const = 0;
+	virtual ~Abstract_Base_Class() {}
+	virtual void Set_Data(T) = 0;
+	virtual int Get_Data() const = 0;
 };
 
-template <typename T>
-class SubClass : public AbstractBaseClass<T>
+template<typename T>
+class Sub_Class : public Abstract_Base_Class<T>
 {
 private:
 	T data;
 
 public:
-	SubClass(T value) : data(value) {}
-	~SubClass() {}
+	Sub_Class(T value) : data{value} {}
+	~Sub_Class() {}
 
-	void SetData(T value)
+	void Set_Data(T value)
 	{
 		this->data = value;
 	}
 
-	T GetData() const
+	T Get_Data() const
 	{
 		return this->data;
 	}
@@ -32,10 +32,11 @@ public:
 
 int main()
 {
-	SubClass<int> subClass(0);
-	std::cout << subClass.GetData() << '\n';
-	subClass.SetData(20);
-	std::cout << subClass.GetData() << '\n';
+	Sub_Class<int> sub_Class(0);
+	std::cout << sub_Class.Get_Data() << '\n';
+
+	sub_Class.Set_Data(20);
+	std::cout << sub_Class.Get_Data() << '\n';
 
 	std::cin.get();
 }
