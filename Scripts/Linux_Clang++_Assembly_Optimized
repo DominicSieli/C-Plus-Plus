@@ -7,6 +7,9 @@ mkdir -p Assembly
 echo "#pragma once" > Source/Configuration.h
 echo "#define LINUX" >> Source/Configuration.h
 
-file=${PWD##*/}_$(basename $0).asm
+read -p "Source File: " source
+file="$source"_$(basename $0).asm
 
-clang++ -S -O3 -std=c++17 Source/*.cpp -o Assembly/$file
+clear
+
+clang++ -S -O3 -std=c++17 Source/$source.cpp -o Assembly/$file

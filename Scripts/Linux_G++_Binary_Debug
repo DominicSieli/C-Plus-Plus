@@ -8,8 +8,11 @@ echo "#pragma once" > Source/Configuration.h
 echo "#define LINUX" >> Source/Configuration.h
 echo "#define DEBUG" >> Source/Configuration.h
 
-file=${PWD##*/}_$(basename $0)
+read -p "Source File: " source
+file="$source"_$(basename $0)
 
-g++ -g -Wall -std=c++17 Source/*.cpp -o Binaries/$file
+clear
+
+g++ -O3 -std=c++17 Source/$source.cpp -o Binaries/$file
 
 ./Binaries/$file
