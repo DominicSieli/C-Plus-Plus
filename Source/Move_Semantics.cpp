@@ -10,7 +10,7 @@ private:
 public:
 	Array(const unsigned int& n) : n{n}, array{new T[n]}
 	{
-
+		
 	}
 
 	Array(Array&& move_class) : n{move_class.n}, array{move_class.array}
